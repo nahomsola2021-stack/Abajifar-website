@@ -1,0 +1,6 @@
+{
+  "name": "Abajifar Tour and Travel",
+  "description": "Experience Ethiopia beyond the ordinary with Abajifar Tour and Travel. Bespoke expeditions to the Simien Mountains, Lalibela, Omo Valley, and Danakil Depression.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

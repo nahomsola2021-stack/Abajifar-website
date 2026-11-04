@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "DM Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Poppins', 'DM Sans', sans-serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: var(--font-sans);
+  }
+
+  html {
+    font-size: 16.5px;
+    scroll-behavior: smooth;
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 17.5px;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    /* Whiter background with delicate, subtle, luminous cyan-sky gradient */
+    background: linear-gradient(155deg, #ffffff 0%, #f6fafd 35%, #eef6fc 70%, #f8fcfe 100%);
+    background-attachment: fixed;
+    color: #0b2840;
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Universal line-height 1.7 for an airy, editorial reading feel */
+  p, .body-text, article, blockquote, li, dd, dt {
+    line-height: 1.7;
+  }
+
+  /* Use the display face for headings and the readable sans family throughout. */
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0;
+    font-feature-settings: "kern", "liga", "dlig";
+  }
+
+  /* Standardized heading scale definitions */
+  h1 {
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-weight: 700;
+    line-height: 1.35;
+  }
+}
+
+/* Editorial line-height utility class */
+.leading-editorial {
+  line-height: 1.7 !important;
+}
+
+.destinations-hero {
+  min-height: max(620px, 82svh);
+}
+
+.destinations-hero-content {
+  padding-top: 140px;
+  padding-bottom: 72px;
+}
+
+.destinations-hero-title {
+  margin-top: 1.25rem;
+  padding-block: 0.12em 0.2em;
+  line-height: 1.25;
+  overflow: visible;
+}
+
+.tours-hero {
+  min-height: max(620px, 82svh);
+}
+
+.tours-hero-content {
+  padding-top: 140px;
+  padding-bottom: 72px;
+}
+
+.tours-hero-title {
+  margin-top: 1.25rem;
+  padding-block: 0.12em 0.2em;
+  line-height: 1.25;
+  overflow: visible;
+}
+
+.tour-card {
+  overflow: visible;
+  border: 1px solid rgba(23, 53, 59, 0.12);
+  border-radius: 12px;
+  background: linear-gradient(155deg, #ffffff 0%, #f7faf8 100%);
+  box-shadow: 0 12px 32px -20px rgba(23, 53, 59, 0.55), 0 3px 8px rgba(23, 53, 59, 0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(154, 99, 54, 0.38);
+  box-shadow: 0 22px 42px -20px rgba(23, 53, 59, 0.38), 0 5px 12px rgba(23, 53, 59, 0.08);
+}
+
+.home-blue-wash {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.group:hover .home-blue-wash,
+.group:focus-within .home-blue-wash {
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .destinations-hero {
+    min-height: max(700px, 84svh);
+  }
+
+  .destinations-hero-content {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+
+  .tours-hero {
+    min-height: max(700px, 84svh);
+  }
+
+  .tours-hero-content {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}
+
+/* Whiter, luminous, elegant gradient system with soft cyan-sky whisper */
+.grad-why-ethiopia {
+  background: 
+    radial-gradient(ellipse at 85% 15%, rgba(190, 155, 105, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 85%, rgba(120, 105, 82, 0.04) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f8f7f4 50%, #fcfbf9 100%) !important;
+}
+
+.grad-destinations {
+  background: 
+    radial-gradient(ellipse at 15% 20%, rgba(6, 182, 212, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(14, 165, 233, 0.07) 0%, transparent 60%),
+    linear-gradient(135deg, #ffffff 0%, #f2f8fc 50%, #f7fbfe 100%) !important;
+}
+
+.grad-featured-tours {
+  background: 
+    radial-gradient(ellipse at 80% 20%, rgba(34, 211, 238, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(6, 182, 212, 0.07) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f0f8fd 50%, #f6fafd 100%) !important;
+}
+
+.grad-experiences {
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f3f8fd 50%, #f8fcfe 100%) !important;
+}
+
+.grad-about-snippet {
+  background: 
+    radial-gradient(ellipse at 85% 30%, rgba(6, 182, 212, 0.07) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f5f9fd 50%, #f9fcfe 100%) !important;
+}
+
+.grad-testimonials {
+  background: 
+    radial-gradient(ellipse at 80% 25%, rgba(6, 182, 212, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 75%, rgba(14, 165, 233, 0.07) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f3f8fd 50%, #f8fcfe 100%) !important;
+}
+
+.grad-field-notes {
+  background: 
+    radial-gradient(ellipse at 15% 40%, rgba(34, 211, 238, 0.09) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f2f8fd 50%, #f7fbfe 100%) !important;
+}
+
+.grad-faq {
+  background: 
+    radial-gradient(ellipse at 85% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 85%, rgba(14, 165, 233, 0.06) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f5f9fd 50%, #f9fcfe 100%) !important;
+}
+
+.grad-final-cta {
+  background: 
+    radial-gradient(ellipse at 50% 10%, rgba(6, 182, 212, 0.12) 0%, transparent 65%),
+    linear-gradient(135deg, #f0f7fd 0%, #e2f0fa 50%, #eaf4fb 100%) !important;
+}
+
+/* Inner pages gradients - Whiter backgrounds */
+.grad-page-destinations {
+  background: 
+    radial-gradient(ellipse at 85% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f4f9fd 45%, #ecf5fc 100%) !important;
+}
+
+.grad-page-tours {
+  background: 
+    radial-gradient(ellipse at 80% 15%, rgba(34, 211, 238, 0.10) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f2f8fd 45%, #ebf5fc 100%) !important;
+}
+
+.grad-page-tour-detail {
+  background: 
+    radial-gradient(ellipse at 85% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f4f9fd 45%, #ecf5fc 100%) !important;
+}
+
+.grad-page-about {
+  background: 
+    radial-gradient(ellipse at 75% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #f5f9fd 45%, #edf5fc 100%) !important;
+}
+
+.grad-page-contact {
+  background: 
+    radial-gradient(ellipse at 50% 20%, rgba(6, 182, 212, 0.10) 0%, transparent 65%),
+    linear-gradient(135deg, #ffffff 0%, #edf5fc 50%, #e2f0fa 100%) !important;
+}
+
+/* Glass & Card Tokens on Whiter Body */
+.light-cyan-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(8, 145, 178, 0.16);
+  box-shadow: 0 10px 30px -10px rgba(8, 77, 110, 0.07);
+}
+
+.light-cyan-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.light-cyan-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 145, 178, 0.45);
+  box-shadow: 0 18px 35px -10px rgba(8, 145, 178, 0.18);
+}
+
+/* Primary Button in Rich Cyan-Blue */
+.btn-primary-cyan {
+  background: #094d6e;
+  color: #ffffff;
+  transition: all 0.2s ease-out;
+}
+.btn-primary-cyan:hover {
+  background: #08608a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(9, 77, 110, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f8fc;
+}
+::-webkit-scrollbar-thumb {
+  background: #094d6e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+@media (max-width: 639px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .home-page .will-change-transform {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

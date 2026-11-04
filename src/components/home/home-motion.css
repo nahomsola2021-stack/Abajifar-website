@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------------
+   Home page motion layer
+   Everything here is disabled under prefers-reduced-motion.
+------------------------------------------------------------------- */
+
+html { scroll-behavior: smooth; }
+
+@keyframes ab-rise {
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ab-cue {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  50.01% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+@keyframes ab-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(6%, 8%, 0) scale(1.15); }
+}
+@keyframes ab-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.1); }
+  50%      { transform: translate3d(-7%, -6%, 0) scale(0.95); }
+}
+
+/* Scroll reveal (tagged by useScrollReveal). `backwards` fill means the
+   animation never fights the element's own hover transforms afterwards. */
+[data-reveal]:not([data-in]) { opacity: 0; }
+[data-reveal][data-in] {
+  animation: ab-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+/* Hero entrance sequence */
+.hero-in {
+  animation: ab-rise 1100ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms) backwards;
+}
+.scroll-cue-line { animation: ab-cue 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+
+/* Gold gradient type (static, no animation) */
+.text-gold {
+  background: linear-gradient(100deg, #c9972b 0%, #f6e4a6 38%, #D4AF37 62%, #f1d98a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Slow ambient glow for dark sections */
+.aurora { position: relative; isolation: isolate; }
+.aurora::before,
+.aurora::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.aurora::before {
+  width: 46vw; height: 46vw; top: -12%; left: -10%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.28), transparent 65%);
+  animation: ab-drift-a 20s ease-in-out infinite;
+}
+.aurora::after {
+  width: 40vw; height: 40vw; bottom: -14%; right: -8%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.20), transparent 65%);
+  animation: ab-drift-b 24s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal]:not([data-in]) { opacity: 1; }
+  [data-reveal][data-in],
+  .hero-in,
+  .scroll-cue-line,
+  .aurora::before,
+  .aurora::after { animation: none !important; }
+}
