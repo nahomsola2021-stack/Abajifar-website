@@ -3,6 +3,7 @@ import { RouterProvider, useRouter } from './context/RouterContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { PlanYourTripModal } from './components/common/PlanYourTripModal';
+import { WhatsAppFloatingButton } from './components/common/WhatsAppFloatingButton';
 import { HomePage } from './pages/HomePage';
 import { DestinationsPage } from './pages/DestinationsPage';
 import { DestinationDetailPage } from './pages/DestinationDetailPage';
@@ -87,6 +88,7 @@ const AppContent: React.FC = () => {
       <div className="flex-1">{renderCurrentPage()}</div>
       <Footer />
       <PlanYourTripModal />
+      <WhatsAppFloatingButton />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { toursData } from '../data/toursData';
 import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 const WHATSAPP_URL =
-  'https://wa.me/251944444447?text=Hello%20Abajifar%2C%20I%27d%20like%20to%20plan%20a%20trip%20to%20Ethiopia.';
+  'https://wa.me/251944444448?text=Hello%20Abajifar%2C%20I%27d%20like%20to%20plan%20a%20trip%20to%20Ethiopia.';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

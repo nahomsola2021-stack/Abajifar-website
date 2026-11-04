@@ -45,7 +45,7 @@ export const EnquiryCard: React.FC<EnquiryCardProps> = ({ eyebrow, title, text, 
           <ArrowRight className="h-4 w-4" />
         </button>
         <a
-          href={`https://wa.me/251944444447?text=${encodeURIComponent(whatsappText)}`}
+          href={`https://wa.me/251944444448?text=${encodeURIComponent(whatsappText)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-[#1ebe5b] sm:text-base"

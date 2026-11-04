@@ -15,7 +15,7 @@ const PHONES = [
   { display: '+251 944 444 447', href: 'tel:+251944444447' },
   { display: '+251 944 444 448', href: 'tel:+251944444448' }
 ];
-const WHATSAPP_HREF = 'https://wa.me/251944444447';
+const WHATSAPP_HREF = 'https://wa.me/251944444448';
 const EMAIL = 'abajifartourandtravel@gmail.com';
 
 const SOCIAL_LINKS = [

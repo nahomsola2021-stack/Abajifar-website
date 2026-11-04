@@ -41,13 +41,13 @@ export const FinalCTA: React.FC = () => {
 
         <div data-reveal-auto className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-white/80">
           <a
-            href="https://wa.me/251944444447"
+            href="https://wa.me/251944444448"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 transition-colors hover:text-white"
           >
             <MessageSquare className="h-4 w-4 text-[#D4AF37]" />
-            <span>WhatsApp: +251 944 444 447</span>
+            <span>WhatsApp: +251 944 444 448</span>
           </a>
           <span aria-hidden="true" className="text-white/30">·</span>
           <a href="tel:+251933333338" className="flex items-center gap-2 transition-colors hover:text-white">

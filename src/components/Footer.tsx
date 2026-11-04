@@ -41,13 +41,13 @@ export const Footer: React.FC = () => {
             
             <div className="pt-2">
               <a
-                href="https://wa.me/251944444447"
+                href="https://wa.me/251944444448"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-cyan-400/30 text-white text-xs font-bold transition-all shadow-sm"
               >
                 <MessageSquare className="w-4 h-4 text-[#22d3ee]" />
-                <span>WhatsApp: +251 944 444 447</span>
+                <span>WhatsApp: +251 944 444 448</span>
               </a>
             </div>
 
