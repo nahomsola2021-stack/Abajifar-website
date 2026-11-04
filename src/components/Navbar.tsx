@@ -145,7 +145,7 @@ export const Navbar: React.FC = () => {
             aria-label="Abajifar Tour and Travel Home"
           >
             <img
-              src="public/images/Abajifar Tour and Travel Logo.png"
+              src="/images/Abajifar Tour and Travel Logo.png"
               alt="Abajifar Tour and Travel"
               className="h-12 w-auto max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105 sm:h-14 sm:max-w-[220px]"
             />

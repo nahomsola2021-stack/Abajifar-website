@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Philosophy */}
           <div className="lg:col-span-2 space-y-4">
             <img
-              src="public/images/Abajifar Tour and Travel Logo.png"
+              src="/images/Abajifar Tour and Travel Logo.png"
               alt="Abajifar Tour and Travel"
               className="h-14 w-auto max-w-[240px] object-contain"
             />
